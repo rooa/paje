@@ -1,0 +1,21 @@
+name: 'paje'
+author: 'Jayanth Koushik'
+description: 'Build static webpage using jekyll'
+
+inputs:
+  setupscript:
+    description: 'Script to execute before compilation'
+    required: true
+  targetbranch:
+    description: 'Target branch to push compiled webpage'
+    required: false
+    default: 'gh-pages'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  entrypoint: '/main.sh'
+
+branding:
+  icon: 'upload'
+  color: 'orange'
