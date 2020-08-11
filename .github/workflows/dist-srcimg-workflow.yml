@@ -1,0 +1,22 @@
+name: Publish source image
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'srcimg/*'
+    - '.github/workflows/dist-srcimg-workflow.yml'
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: docker/build-push-action@master
+      with:
+        username: jayanthkoushik
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: jayanthkoushik/paje
+        path: ./srcimg
+        tag_with_ref: true
