@@ -10,6 +10,10 @@ inputs:
     description: 'Target branch to push compiled webpage'
     required: false
     default: 'gh-pages'
+  no404:
+    description: 'Disable 404 page generation'
+    required: false
+    default: false
 
 runs:
   using: 'docker'

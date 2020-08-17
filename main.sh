@@ -11,6 +11,10 @@ git checkout -t origin/"${INPUT_TARGETBRANCH}" || git checkout -b "${INPUT_TARGE
 git rm -rf "*" ".*" --ignore-unmatch
 
 cd /www
+if [ "${INPUT_NO404}" = true ]; then
+    rm 404.md
+fi
+
 bundle exec jekyll build -d "${GITHUB_WORKSPACE}"
 
 cd "${GITHUB_WORKSPACE}"

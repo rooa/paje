@@ -28,5 +28,6 @@ jobs:
       with:
         setupscript: cp -r assets/* /www/
         targetbranch: dist
+        no404: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
