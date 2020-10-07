@@ -7,3 +7,8 @@ compress_html:
   comments: ["<!-- ", " -->"]
   endings: all
   startings: [html, head, body]
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
