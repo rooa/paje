@@ -29,9 +29,10 @@ layout: compress
 {% if page.author %}
 <p>
 <ul class="lead list-inline">
+{% assign has_equal_contribs = false %}
 {% for author in page.author %}
   <li class="list-inline-item">
-    {{ author.name }}<sup class="sup-right">{{ author.affiliation.id }}{%- unless page.skipequal -%}{%- if author.equalcontrib -%},*{%- endif -%}{%- endunless -%}</sup>
+    {{ author.name }}<sup class="sup-right">{{ author.affiliation.id }}{%- unless page.skipequal -%}{%- if author.equalcontrib -%},*{%- assign has_equal_contribs = true -%}{%- endif -%}{%- endunless -%}</sup>
   </li>
 {% endfor %}
 </ul>
@@ -40,7 +41,7 @@ layout: compress
   <li class="list-inline-item"><sup class="sup-left">{{ institute.id }}</sup>{{ institute.name }}</li>
 {% endfor %}
 </ul>
-{%- unless page.skipequal -%}<p class="small"><sup class="sup-left">*</sup>Equal contribution</p>{% endunless %}
+{%- unless page.skipequal -%}{%- if has_equal_contribs == true -%}<p class="small"><sup class="sup-left">*</sup>Equal contribution</p>{%- endif -%}{%- endunless -%}
 {% endif %}
 
 {% if page.abstract %}
