@@ -17,7 +17,7 @@ class Jekyll::Converters::Markdown::PandocProcessor
 
         @converter = PandocRuby.new(
             content,
-            :from => :"markdown-markdown_in_html_blocks"
+            :from => :"markdown"
         )
         @converter.to_html(
             :mathjax,
@@ -32,3 +32,13 @@ class Jekyll::Converters::Markdown::PandocProcessor
         )
     end
 end
+
+module Jekyll
+  module PandocFilter
+    def pandoc(input)
+      PandocRuby.convert(input, :from => "markdown", :to => "html", :mathjax)
+    end
+  end
+end
+
+Liquid::Template.register_filter(Jekyll::PandocFilter)
