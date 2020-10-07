@@ -10,5 +10,6 @@ compress_html:
 defaults:
   - scope:
       path: ""
+      type: "pages"
     values:
       layout: "default"
