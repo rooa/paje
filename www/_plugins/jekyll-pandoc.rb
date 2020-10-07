@@ -36,7 +36,7 @@ end
 module Jekyll
   module PandocFilter
     def pandoc(input)
-      PandocRuby.convert(input, :from => "markdown", :to => "html", :mathjax)
+      PandocRuby.convert(input, :mathjax, :from => "markdown", :to => "html")
     end
   end
 end
