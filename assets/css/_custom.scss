@@ -113,11 +113,19 @@ h6 {
   font-size: 1.0rem;
 }
 
-.header-section-number {
-  font-size: smaller;
-  font-weight: normal;
-  &:after {
-    content: ".";
+h1, h2, h3 {
+  .header-section-number {
+    font-size: smaller;
+    font-weight: normal;
+    &:after {
+      content: ".";
+    }
+  }
+}
+
+h4, h5, h6 {
+  .header-section-number {
+    display: none;
   }
 }
 
