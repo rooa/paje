@@ -9,7 +9,6 @@ compress_html:
   startings: [html, head, body]
 defaults:
   - scope:
-      path: ""
-      type: "pages"
+      path: "*.md"
     values:
       layout: "default"
