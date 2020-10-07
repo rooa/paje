@@ -20,6 +20,8 @@ $(document).ready(function () {
         setTheme('light', modLinks=false);
     }
 
+    $('table').wrap('<div class="table-responsive"></div>');
+
     $('#refs').prepend('<h1>References</h1>');
     $('.footnotes').prepend('<h1 class="sr-only">Footnotes</h1>');
 });
