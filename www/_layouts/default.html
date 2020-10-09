@@ -46,9 +46,9 @@ layout: compress
 
 {% if page.abstract %}
 <h1>Abstract</h1>
-<p class="lead">
-{{ page.abstract | pandoc }}
-</p>
+<div id="abstract">
+{{- page.abstract | pandoc -}}
+</div>
 {% endif %}
 
 {{content}}

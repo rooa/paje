@@ -20,6 +20,8 @@ $(document).ready(function () {
         setTheme('light', modLinks=false);
     }
 
+    $('#abstract p').addClass('lead');
+
     $('table').wrap('<div class="table-responsive"></div>');
 
     $('#refs').prepend('<h1>References</h1>');
