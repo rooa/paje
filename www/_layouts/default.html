@@ -53,6 +53,15 @@ layout: compress
 
 {{content}}
 
+{%- capture appendix -%}
+{%- include appendix.md -%}
+{%- endcapture -%}
+{% if appendix != "" %}
+<div id="appendix">
+{{ appendix | pandoc }}
+</div>
+{% endif %}
+
 </div>
 </div>
 </div>

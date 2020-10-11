@@ -131,7 +131,7 @@ h4, h5, h6 {
 
 #refs {
   border-top: 1px solid;
-  margin-top: 1.5rem;
+  margin-top: 5rem;
   div:first-of-type {
     padding-top: 0.5rem;
   }
@@ -150,4 +150,9 @@ h4, h5, h6 {
 
 .subfigures p {
   text-align: center;
+}
+
+#appendix {
+  border-top: 1px solid;
+  margin-top: 5rem;
 }

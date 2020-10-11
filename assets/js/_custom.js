@@ -26,6 +26,26 @@ $(document).ready(function () {
 
     $('#refs').prepend('<h1>References</h1>');
     $('.footnotes').prepend('<h1 class="sr-only">Footnotes</h1>');
+
+    $('#appendix #refs').remove();
+    $('#appendix .footnotes').remove();
+
+    $('#appendix .header-section-number').each(function(index) {
+        var q = Math.floor(index / 26) + 1;
+        var r = index % 26;
+        var secChr = String.fromCharCode(65 + r);
+        $(this).text(secChr.repeat(q));
+    });
+
+    $('#appendix figcaption').each(function(index) {
+        var cap = $(this).text().replace(/^Figure /, 'Figure S');
+        $(this).text(cap);
+        $(this).siblings('img').prop('alt', cap);
+    });
+    $('#appendix table caption').each(function(index) {
+        var cap = $(this).text();
+        $(this).text(cap.replace(/^Table /, 'Table S'));
+    });
 });
 
 function setTheme(theme, modLinks=true) {
