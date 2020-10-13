@@ -30,6 +30,11 @@ body.dark-theme {
   padding-bottom: 2rem;
 }
 
+.math-display-wrap {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 svg {
   stroke: currentColor;
   stroke-linecap: round;
