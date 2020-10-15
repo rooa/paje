@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $('table').wrap('<div class="table-responsive"></div>');
 
-    $('.math.display').parents('p').wrap('<div class="math-display-wrap"></div>');
+    $('.math.display').wrap('<span class="math-display-wrap"></span>');
 
     $('#refs').prepend('<h1>References</h1>');
     $('#refs').append($('.footnotes ol'));
