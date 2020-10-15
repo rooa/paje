@@ -27,7 +27,8 @@ $(document).ready(function () {
     $('.math.display').wrap('<div class="math-display-wrap"></div>');
 
     $('#refs').prepend('<h1>References</h1>');
-    $('.footnotes').prepend('<h1 class="sr-only">Footnotes</h1>');
+    $('#refs').append($('.footnotes ol'));
+    $('.footnotes').remove();
 
     $('#appendix #refs').remove();
     $('#appendix .footnotes').remove();

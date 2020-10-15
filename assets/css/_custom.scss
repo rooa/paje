@@ -144,13 +144,9 @@ h4, h5, h6 {
   div:last-of-type {
     padding-bottom: 0.75rem;
   }
-}
-
-.footnotes {
-  border-top: 1px solid;
-  padding-top: 1rem;
-  hr {
-    display: none;
+  ol {
+    border-top: 1px solid;
+    padding-top: 1rem;
   }
 }
 
