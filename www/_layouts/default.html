@@ -6,6 +6,9 @@ layout: compress
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
   <title>{{page.title}}</title>
   <link rel="stylesheet" href="{% unless page.localassets %}https://jkoushik.me/paje/{% endunless %}assets/main.css">
   {% if page.extcss %}
