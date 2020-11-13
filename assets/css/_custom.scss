@@ -18,6 +18,18 @@ body.dark-theme {
   }
 }
 
+a {
+  &:link {
+    color: MediumBlue
+  }
+  &:visited {
+    color: DarkBlue
+  }
+  &:hover {
+    color: Blue
+  }
+}
+
 @media (min-width: 576px) {
   p {
     text-align: justify;
