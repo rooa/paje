@@ -10,12 +10,13 @@ layout: compress
   <meta name="description" content="{{ page.description }}">
   {% endif %}
   <title>{{page.title}}</title>
-  <link rel="stylesheet" href="{% unless page.localassets %}https://jkoushik.me/paje/{% endunless %}assets/main.css">
+  <link rel="stylesheet" href="{% unless page.localassets %}https://hiroakih.me/paje/{% endunless %}assets/main.css">
   {% if page.extcss %}
   {% for extcss in page.extcss %}
   <link rel="stylesheet" href="{{ extcss }}">
   {% endfor %}
   {% endif %}
+  <link rel="shortcut icon" href="{% unless page.localassets %}https://hiroakih.me/paje/{% endunless %}assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 <div class="container">
@@ -68,11 +69,12 @@ layout: compress
 </div>
 </div>
 </div>
-<script src="{% unless page.localassets %}https://jkoushik.me/paje/{% endunless %}assets/main.js"></script>
+<script src="{% unless page.localassets %}https://hiroakih.me/paje/{% endunless %}assets/main.js"></script>
 {% if page.extjs %}
 {% for extjs in page.extjs %}
 <script src="{{ extjs }}"></script>
 {% endfor %}
 {% endif %}
+{% include scripts.html %}
 </body>
 </html>
